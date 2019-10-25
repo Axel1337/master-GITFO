@@ -10,6 +10,11 @@ public class Guesser {
 		this.low = low;
 		this.high = high;
 	}
+	
+	public String toString() {
+		return "low: " + low + " high: " + high;
+	}
+
 
 	public void start() {
 		rules();
