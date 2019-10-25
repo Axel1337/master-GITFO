@@ -1,6 +1,7 @@
 package GitInl;
 
 import java.io.Console;
+import java.util.Scanner;
 
 /**
  * Assignment 1 - Guessing Game
@@ -59,12 +60,15 @@ public class Guesser{
    * the player.
    */
   private String getReply(){
-    String reply = null;
-    // Write code here which reads a String from the console.
-    // As long as it is not a valid reply (one of "T" and "F")
-    // write an error message, and read a new reply.
-    // When you have gotten a valid reply, return it.
-    return reply;
+		String reply;
+		Scanner sc = new Scanner(System.in);
+		reply = sc.next();
+		reply = reply.toUpperCase();
+		while (!reply.equals("T") && !reply.equals("F")) {
+			System.out.println("Please insert T or F");
+		}
+
+		return reply;
   }
 
   private void doGuesses(){
